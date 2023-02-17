@@ -51,3 +51,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 * [Deployment - React](https://facebook.github.io/create-react-app/docs/deployment)
 
 * [`npm run build` fails to minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+* [Easy Optimization Of Your React Docker Image. Down To 22MB!](https://levelup.gitconnected.com/easy-optimization-of-your-react-docker-image-down-to-22mb-9d9e3a06870)
