@@ -3,11 +3,14 @@ name: docker-ci
 on:
   # When pull request is created with target branch is main
   # and the PR is closed
-  pull_request:
-    branches:
-      - 'main'
-    types:
-      - 'closed'
+  # pull_request:
+  #   branches:
+  #     - 'main'
+  #   types:
+  #     - 'closed'
+
+  # Or we can use workflow_dispatch to trigger the workflow manually
+  workflow_dispatch:
 
 jobs:
   docker:
