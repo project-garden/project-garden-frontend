@@ -1,9 +1,13 @@
 name: docker-ci
 
 on:
+  # When pull request is created with target branch is main
+  # and the PR is closed
   pull_request:
     branches:
       - 'main'
+    types:
+      - 'closed'
 
 jobs:
   docker:
