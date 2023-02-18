@@ -83,21 +83,18 @@ export function Body() {
 
 export function Footer() {
   return (
-    <div>
-      <footer>
-        <ul>
-          <li>Project Garden</li>
-          <li>Community</li>
-          <li>Places</li>
-          <li>Subscriptions</li>
-          <li> Follow Us
-          <li>Linkedin</li>
-          <li>Instagram</li>
-          <li>Youtube</li>
-          </li>
-        </ul>
-      </footer>
-    </div>
+    <div class="columns">
+      <div class="column is-one-third">Project Garden</div>
+      <div class="column">Community</div>
+      <div class="column">Places</div>
+      <div class="column">Subscriptions</div>
+      <div class="column">
+          Follow Us
+          <div class="box">Instagram</div>
+          <div class="box">Youtube</div>
+          <div class="box">LinkedIn</div>
+      </div>
+  </div>
   )
 }
 
