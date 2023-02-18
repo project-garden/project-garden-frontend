@@ -1,15 +1,29 @@
 export function NavigationBar() {
   return (
-    <div>
-      <header className="App-header">
-        <ul>
-          <li>Project Garden</li>
-          <li>Article</li>
-          <li>About Us</li>
-          <li>More</li>
-        </ul>
-      </header>
-    </div>
+    <nav className="navbar is-primary" role="navigation" aria-label="main-navigation">
+      <a href="/" className="navbar-brand">
+        Project Garden
+      </a>
+      <div className="navbar-menu">
+        <div className="navbar-start">
+          <a href="/" className="navbar-item">
+            Articles
+          </a>
+          <a href="/" className="navbar-item">
+            About Us
+          </a>
+          <a href="/" className="navbar-item">
+            More
+          </a>
+          <a href="/" className="navbar-item">
+            Login
+          </a>
+          <a href="/" className="navbar-item">
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </nav>
   )
 }
 
