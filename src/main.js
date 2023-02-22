@@ -1,30 +1,62 @@
 export function NavigationBar() {
   return (
-    <nav className="navbar is-primary" role="navigation" aria-label="main-navigation">
-      <a href="/" className="navbar-brand">
-        Project Garden
-      </a>
-      <div className="navbar-menu">
-        <div className="navbar-start">
-          <a href="/" className="navbar-item">
-            Articles
+    <nav class="navbar is-light" role="navigation" aria-label="main-navigation">
+      <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+          <img src="/logo.png" alt="Project Garden Logo"/>
+        </a>
+
+        <a href="/" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="projectGardenNavbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="projectGardenNavbar" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="/" class="navbar-item has-dropdown is-hoverable">
+            <a href="/" class="navbar-link">
+              Articles
+            </a>
+            <div class="navbar-dropdown">
+              <hr class="navbar-divider" />
+              <a href="/" class="navbar-item">
+                <strong>📖 Knowledges</strong>
+              </a>
+              <hr class="navbar-divider" />
+              <a href="/" class="navbar-item">
+                📖 Books
+              </a>
+              <a href="/" class="navbar-item">
+                📃 Papers
+              </a>
+              <a href="/" class="navbar-item">
+                👩🏻‍🔬 Experts
+              </a>
+              <hr class="navbar-divider" />
+              <a href="/" class="navbar-item">
+                <strong>🌿 Activities</strong>
+              </a>
+              <hr class="navbar-divider" />
+            </div>
           </a>
-          <a href="/" className="navbar-item">
+          <a href="/" class="navbar-item">
             About Us
           </a>
-          <a href="/" className="navbar-item">
-            More
-          </a>
-          <a href="/" className="navbar-item">
-            <button class="button is-primary">
-              Login
-            </button>
-          </a>
-          <a href="/" className="navbar-item">
-            <button class="button">
-              Sign Up
-            </button>
-          </a>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/" class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a href="/" class="button is-light">
+              Log in
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -109,7 +141,7 @@ export function Footer() {
 
 export function App() {
   return (
-          <div className="App">
+          <div class="App">
             <section>
               <NavigationBar/>
             </section>
