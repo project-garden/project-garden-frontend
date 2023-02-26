@@ -1,37 +1,130 @@
-import logo1 from './1.png'
-import logo2 from './2.png'
+import {Article, Profile, Body} from './pages/home'
 
-export function Profile(){
-  return(
-    <div>
-    <section>
-    <h1>Our Lead Project</h1>
-    <img
-      src={logo1}
-      alt="kang apicii"
-    />
-    </section>
-    <section>
-    <img
-      src={logo2}
-      alt="kang apicii"
-    />
-    </section>
-    </div>
-  );
+export function NavigationBar() {
+  return (
+    <nav class="navbar is-light" role="navigation" aria-label="main-navigation">
+      <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+          <img src="/logo.png" alt="Project Garden Logo"/>
+        </a>
+
+        <a href="/" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="projectGardenNavbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="projectGardenNavbar" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="/" class="navbar-item has-dropdown is-hoverable">
+            <a href="/" class="navbar-link">
+              Articles
+            </a>
+            <div class="navbar-dropdown">
+              <hr class="navbar-divider" />
+              <a href="/" class="navbar-item">
+                <strong>📖 Knowledges</strong>
+              </a>
+              <hr class="navbar-divider" />
+              <a href="/" class="navbar-item">
+                📖 Books
+              </a>
+              <a href="/" class="navbar-item">
+                📃 Papers
+              </a>
+              <a href="/" class="navbar-item">
+                👩🏻‍🔬 Experts
+              </a>
+              <hr class="navbar-divider" />
+              <a href="/" class="navbar-item">
+                <strong>🌿 Activities</strong>
+              </a>
+              <hr class="navbar-divider" />
+            </div>
+          </a>
+          <a href="/" class="navbar-item">
+            About Us
+          </a>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/" class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a href="/" class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
 }
 
-export function Article(){
-  return(
-    <div>
-      <section>
-        <h2>
-          this is Content
-        </h2>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus, turpis at sodales fringilla, lectus orci euismod nulla, ac convallis turpis arcu sed arcu. Fusce lobortis libero id elit egestas, non volutpat ex blandit. Nunc maximus vulputate quam, vel feugiat odio fringilla ut. Integer magna ipsum, ornare eget maximus consectetur, sollicitudin sit amet magna. Nam fermentum luctus risus, placerat condimentum arcu tristique in. Fusce ac nulla a orci ullamcorper laoreet eu ac augue. Suspendisse vitae magna velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce egestas, nunc vel interdum sollicitudin, urna lorem dignissim libero, ut egestas ligula lacus eu est. Integer hendrerit nec eros ut pellentesque. Praesent vehicula, mauris sit amet dictum condimentum, sapien purus aliquet quam, ac lobortis lectus tellus non nisi. 
-        </p>
-      </section>
-    </div>
+export function Footer() {
+  return (
+      <footer class="section is-warning">
+        <div class="container">
+          <div class="pb-5 is-flex is-flex-wrap-wrap is-justify-content-between is-align-items-center">
+            <div class="mr-auto mb-2">
+              <a class="is-inline-block" href="/">
+                <img class="image" src="/logo.png" alt="" width="96px" />
+              </a>
+            </div>
+            <div>
+              <ul class="is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center">
+                <li class="mr-4"><a class="button is-white" href="/">Community</a></li>
+                <li class="mr-4"><a class="button is-white" href="/">Places</a></li>
+                <li class="mr-4"><a class="button is-white" href="/">Subscription</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8"></div>
+        <div class="container">
+          <div class="is-flex-tablet is-justify-content-between is-align-items-center">
+            <div class="py-2 is-hidden-tablet"></div>
+            <div class="ml-auto">
+              <a class="mr-4 is-inline-block icon" href="/">
+                <img src="/images/social/linkedin.png" alt="" /></a>
+              <a class="mr-4 is-inline-block icon" href="/">
+                <img src="../images/social/instagram.png" alt="" /></a>
+              <a class="mr-4 is-inline-block icon" href="/">
+                <img src="../images/social/youtube.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
   )
+}
+
+// Setup the home first
+export function App() {
+  return (
+          <div class="App has-text-centered">
+            <section>
+              <NavigationBar/>
+            </section>
+
+            <section>
+              <Article/>
+            </section>
+
+            <section>
+              <Profile/>
+            </section>
+
+            <section>
+              <Body/>
+            </section>
+
+            <section>
+              <Footer/>
+            </section>
+          </div>
+  );
 }
